@@ -1,0 +1,7 @@
+internal:
+  webclient:
+    connect-timeout: 3s
+    response-timeout: 5s
+    max-connections: 200
+    pending-acquire-timeout: 2s
+    enable-logging: true
