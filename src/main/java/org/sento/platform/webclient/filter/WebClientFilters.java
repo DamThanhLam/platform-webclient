@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.ClientRequest;
 import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
 import reactor.core.publisher.Mono;
+import reactor.util.context.ContextView;
 
 @Configuration
 public class WebClientFilters {
@@ -32,11 +33,13 @@ public class WebClientFilters {
     }
 
     private void addHeaderIfPresent(
-        reactor.util.context.ContextView contextView,
+        ContextView contextView,
         String contextKey,
         String headerName,
         ClientRequest.Builder builder
     ) {
+        System.out.println(contextKey);
+        System.out.println(contextView.hasKey(contextKey));
         if (!contextView.hasKey(contextKey)) {
             return;
         }
