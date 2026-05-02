@@ -5,7 +5,7 @@
 
     <groupId>org.sento.platform.webclient</groupId>
     <artifactId>platform-webclient</artifactId>
-    <version>1.4.0</version>
+    <version>1.6.2</version>
     <name>platform-webclient</name>
     <description>platform-webclient</description>
 

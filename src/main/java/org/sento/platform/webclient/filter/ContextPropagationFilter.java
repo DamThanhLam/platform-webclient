@@ -30,9 +30,9 @@ public class ContextPropagationFilter implements ExchangeFilterFunction {
 
         return ClientRequest.from(request)
             .headers(headers -> {
-                addHeaderIfPresent(context, headers, MdcConstants.TRACE_ID, HeaderConstants.TRACE_ID);
-                addHeaderIfPresent(context, headers, MdcConstants.USER_ID, HeaderConstants.USER_ID);
-                addHeaderIfPresent(context, headers, MdcConstants.ROLES, HeaderConstants.ROLES);
+                addHeaderIfPresent(context, headers, HeaderConstants.TRACE_ID, HeaderConstants.TRACE_ID);
+                addHeaderIfPresent(context, headers, HeaderConstants.USER_ID, HeaderConstants.USER_ID);
+                addHeaderIfPresent(context, headers, HeaderConstants.ROLES, HeaderConstants.ROLES);
             })
             .build();
     }
